@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
   
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\AutoController;
+use App\Http\Controllers\HelthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,13 +28,24 @@ Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('auto_index', [AutoController::class, 'index'])->name('auto.index')->middleware('auth');
 Route::get('auto_show/{id}', [AutoController::class, 'show'])->name('auto.show')->middleware('auth');
-
-Route::get('helth_index', [AutoController::class, 'index'])->name('helth.index')->middleware('auth');
-Route::get('helth_show/{id}', [AutoController::class, 'show'])->name('helth.show')->middleware('auth');
+Route::get('auto-coverage', [AutoController::class, 'autocoverage'])->name('auto-coverage');
 
 
+Route::get('helth_index', [HelthController::class, 'index'])->name('helth.index')->middleware('auth');
+Route::get('helth_show/{id}', [HelthController::class, 'show'])->name('helth.show')->middleware('auth');
+Route::post('formsubmit', [HelthController::class, 'formsubmit'])->name('formsubmit');
 
-/*Route::get('/', function () {
+
+Route::get('helth-coverage', [HelthController::class, 'helthcoverage'])->name('helth-coverage');
+
+
+
+Route::get('/', function () {
     return view('welcome');
 });
-*/
+
+
+
+/*Route::get('helth-coverage', function () {
+    return view('helth-coverage');
+});*/

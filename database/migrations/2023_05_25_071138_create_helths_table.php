@@ -23,10 +23,15 @@ return new class extends Migration
             $table->string('dob')->nullable();
             $table->string('gender')->nullable();
             $table->string('student')->nullable();
+            $table->string('medical_condition')->nullable();
             $table->string('any_ongoing_medical_treatment')->nullable();
             $table->string('current_coverage_type')->nullable();
             $table->string('current_insurance_company')->nullable();
             $table->string('expiration_date')->nullable();
+            $table->string('insured_since')->nullable();
+            $table->string('email')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('insured_since')->nullable();
             $table->string('insured_since')->nullable();
             $table->string('other')->nullable();
             $table->timestamps();
