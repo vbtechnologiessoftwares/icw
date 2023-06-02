@@ -1,12 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <title>Casecade</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+ <!--   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+ <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> -->
+  <script type="text/javascript" src="js/jquery-1.9.0.js"></script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js"></script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/additional-methods.js"></script>
+
+
+
+
+
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -27,27 +39,50 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css"
     />
 
-    <script
-      src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
-      type="text/javascript"
-    ></script>
-
   <style>
- select {
-    word-wrap: normal;
-    padding: 8px 15px 8px 15px;
-    border: 1px solid #ccc;
-    border-radius: 0px;
-    margin-bottom: 25px;
-    margin-top: 2px;
-    width: 100%;
-    box-sizing: border-box;
-    font-family: montserrat;
-    color: #2c3e50;
-    background-color: white;
-    font-size: 16px;
-    letter-spacing: 1px;
+    a.btn.btn-primary.next {
+       color: #fff;
+    background-color: #102870;
+    border-color: #0a1a4d;
 }
+
+    a#previous {
+    color: #fff;
+    background-color: #102870;
+    border-color: #0a1a4d;
+}
+    select.form-control {
+    background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%), radial-gradient(#ddd 70%, transparent 72%);
+    background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 0.5em) 0.5em;
+    background-size: 5px 5px, 5px 5px, 1.5em 1.5em;
+    background-repeat: no-repeat;
+}
+    label.col-lg-12.control-label {
+    text-align: left;
+    margin-bottom: 14px;
+    margin-top: 14px;
+}
+   form#myform {
+    background: #fafafaeb;
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+    position: relative;
+}
+label.col-lg-4.control-label {
+    float: left;
+}
+#personal_information,
+    #company_information {
+      display: none;
+    }
+#personal_information,
+    #company_information {
+      display: none;
+    }
 .navbar-expand-sm .navbar-collapse {
     display: contents !important;
     flex-basis: auto;
@@ -163,7 +198,7 @@
         z-index: 0;
         border: none;
         position: relative;
-		background-color: transparent;
+    background-color: transparent;
       }
 
       /*FieldSet headings*/
@@ -284,53 +319,53 @@
         width: 100%;
         object-fit: cover;
       }
-	  .bb{    text-align: right;
+    .bb{    text-align: right;
     font-size: 26px;
     font-weight: 700;}
-	  .aa{
-	  font-size: 65px;
+    .aa{
+    font-size: 65px;
     color: #0e2052;
     font-weight: 700;
     margin-left: 88px;
-	}
-	.cc{
-	font-size: 60px;
+  }
+  .cc{
+  font-size: 60px;
     color: #0e2052;
     font-weight: 700;
     text-align:center;}
-	
-	@media screen and (max-width: 600px) {
-	 .aa{
-	  font-size: 25px !important;
+  
+  @media screen and (max-width: 600px) {
+   .aa{
+    font-size: 25px !important;
     color: #0e2052;
     font-weight: 700;
     margin-left: 88px;
-	}
-	
-	 .bb{  
+  }
+  
+   .bb{  
     font-size: 18px;
     font-weight: 700;
-	text-align:justify !important;
-	}
-	.cc{
-	font-size: 30px;
+  text-align:justify !important;
+  }
+  .cc{
+  font-size: 30px;
     color: #0e2052;
     font-weight: 700;
     text-align:center;
-	margin-top:30px;}
-	.xx{
-	background-color:red !important;}
+  margin-top:30px;}
+  .xx{
+  background-color:red !important;}
 }
 
 .xx{
 background-image:url('{{ asset('image/bg-auto.jpg')}}');background-size:cover;background-repeat:no-repeat;}
-  </style>
+ </style>
 </head>
 <body>
 <div style="background-image:url('{{ asset('image/auto-cover-without-button.jpg')}}');background-size:cover;background-repeat:no-repeat;" class="d-none d-lg-block">
 <nav class="navbar navbar-expand-sm  navbar-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src="{{ asset('image/imageedit_2_6154389925.png')}}"></a>
+    <a class="navbar-brand" href="#"><img src="{{ asset('image/logo-dark-bg.png')}}"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -352,38 +387,36 @@ background-image:url('{{ asset('image/bg-auto.jpg')}}');background-size:cover;ba
 </nav>
 
 <div class="container-fluid mt-3">
-	<div class="row">
-		<div class="col-sm-6">
-		</div>
-		<div class="col-sm-6"><BR><br>
-		<h1 class="aa d-lg-none">Auto COVERAGE</h1>
-		<h1 class="aa d-none d-lg-block">Auto COVERAGE</h1>
-	<br>
-	<p class="bb">Insurance plays a significant role in reducing the financial burden on individuals and mitigating the risk of 
-	catastrophic medical expenses.By providing  a safety net and ensuring access to quality healthcare,health insurance contributes to the overall
-	health and security of individuals and communities.</p>
-		<br><br><br>
-		<div class="row">
-		<div class="col-sm-7">
-		<button class="btn" style="background-color: #0e2052;
+  <div class="row">
+    <div class="col-sm-6">
+    </div>
+    <div class="col-sm-6"><BR><br>
+    <h1 class="aa d-lg-none">Auto COVERAGE</h1>
+    <h1 class="aa d-none d-lg-block">Auto COVERAGE</h1>
+  <br>
+  <p class="bb">Insurance plays a significant role in reducing the financial burden on individuals and mitigating the risk of catastrophic medical expenses.By providing a safety net and ensuring access to quality healthcare,health insurance contributes to the overall health and security of individuals and communities.</p>
+    <br><br><br>
+    <div class="row">
+    <div class="col-sm-7">
+    <button class="btn" style="background-color: #0e2052;
     color: white;
     font-size: 30px;
     padding: 10px;
     font-weight: 600;float:right;    padding-left: 30px;
     padding-right: 30px;"><i class="fa fa-phone"></i>&nbsp;&nbsp;CONTACT US</button>
-		</div>
-		<div class="col-sm-5">
-		<button class="btn" style="background-color: #0e2052;
+    </div>
+    <div class="col-sm-5">
+    <button class="btn" style="background-color: #0e2052;
     color: white;
     font-size: 30px;
     padding: 10px;
     font-weight: 600;    padding-left: 30px;
     padding-right: 30px;float:right;">&nbsp;GET A QUOTE</button>
-		</div>
-		</div>
-		<br><br>
-		</div>
-	</div>
+    </div>
+    </div>
+    <br><br>
+    </div>
+  </div>
 </div>
 </div>
 <div style="" class="d-lg-none">
@@ -407,296 +440,53 @@ background-image:url('{{ asset('image/bg-auto.jpg')}}');background-size:cover;ba
 </nav>
 
 <div class="container-fluid mt-3">
-	<div class="row">
-		<div class="col-sm-6">
-		<center><img src="{{ asset('image/CAR-PAGE-2.png')}}" style="width:100%;"></center>
-		</div>
-		<div class="col-sm-6"><BR><br>
-		<h1 class="aa d-lg-none">HEALTH COVERAGE</h1>
-		<h1 class="aa d-none d-lg-block">HEALTH COVERAGE</h1>
-	<br>
-	<p class="bb">Insurance plays a significant role in reducing the financial burden on individuals and mitigating the risk of 
-	catastrophic medical expenses.By providing  a safety net and ensuring access to quality healthcare,health insurance contributes to the overall
-	health and security of individuals and communities.</p>
-		<br><br><br>
-		<div class="row">
-		<div class="col-sm-7">
-		<button class="btn" style="background-color: #0e2052;
+  <div class="row">
+    <div class="col-sm-6">
+    <center><img src="{{ asset('image/CAR-PAGE-2.png')}}" style="width:100%;"></center>
+    </div>
+    <div class="col-sm-6"><BR><br>
+    <h1 class="aa d-lg-none">Auto COVERAGE</h1>
+    <h1 class="aa d-none d-lg-block">Auto COVERAGE</h1>
+  <br>
+  <p class="bb">Insurance plays a significant role in reducing the financial burden on individuals and mitigating the risk of catastrophic medical expenses.By providing a safety net and ensuring access to quality healthcare,health insurance contributes to the overall health and security of individuals and communities.</p>
+    <br><br><br>
+    <div class="row">
+    <div class="col-sm-7">
+    <button class="btn" style="background-color: #0e2052;
     color: white;
     font-size: 18px;
     padding: 10px;
     font-weight: 600;float:left;   padding-left: 20px;
     padding-right: 20px;"><i class="fa fa-phone"></i>&nbsp;CONTACT US</button>
-		</div>
-		<div class="col-sm-5">
-		<button class="btn" style="background-color: #0e2052;
+    </div>
+    <div class="col-sm-5">
+    <button class="btn" style="background-color: #0e2052;
     color: white;
     font-size: 18px;
     padding: 10px;
     font-weight: 600;    padding-left: 20px;
     padding-right: 20px;float:right;margin-top:-50px;">&nbsp;GET A QUOTE</button>
-		</div>
-		</div>
-		<br><br>
-		</div>
-	</div>
+    </div>
+    </div>
+    <br><br>
+    </div>
+  </div>
 </div>
 </div>
 <div class=" d-lg-none" style="background-color: #c1dcff;">
 <br>
-<h1 class="cc">HEALTH COVERAGE</h1>
-	<br>
-	<div class="container-fluid">
+<h1 class="cc">Auto COVERAGE</h1>
+  <br>
+  <div class="container-fluid">
       <div class="row justify-content-center">
         <div
-          class="col-11 col-sm-9 col-md-7 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2"
+          class="col-11 col-sm-9 col-md-7 col-lg-6 col-xl-8 text-center p-0 mt-3 mb-2"
         >
           <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
          
 
             <form id="msform" >
-              <!-- progressbar -->
-              <center><ul id="progressbar" style="padding-top:20px;margin-left:50px;    margin-top: -80px;">
-                <li class="active" id="account"><strong>Applicant Details</strong></li>
-                <li id="personal"><strong>Coverage Details</strong></li>
-                <li id="payment"><strong>Contact Details</strong></li>
-               </center> 
-              </ul>
-              <div class="progress">
-                <div
-                  class="progress-bar progress-bar-striped progress-bar-animated"
-                  role="progressbar"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                ></div>
-              </div>
-              <br />
-              <!-- fieldsets -->
-              <fieldset>
-                <div class="form-card">
-                  <div class="row" style="padding-left:30px;padding-right:30px;padding-top:30px">
-                    <div class="col-7">
-                      <h2 class="fs-title">Applicant Details:</h2>
-                    </div>
-                    <div class="col-5">
-                      <h2 class="steps">Step 1 - 4</h2>
-                    </div>
-                  </div>
-				  <div class="row" style="padding-left:20px;padding-right:20px;padding-top:30px;">
-					<div class="col-4">
-					<label class="fieldlabels">Relationship to Applicant</label>
-                  <select>
-    <option value="Self">Self</option>
-    <option value="Child">Child</option>
-    <option value="Spouse">Spouse</option>
-    <option value="Grandhild">Grandhild</option>
-    <option value="GrandParent">GrandParent</option>
-    <option value="Sibling">Sibling</option>
-    <option value="Parent">Parent</option>
-    <option value="Other">Other</option>
-    </select>
-					</div>
-					<div class="col-4">
-					<div class="row">
-						<div class="col-6">
-						<label class="fieldlabels">Height</label>
-			<input type="text" name="height"/ required>
-						</div>
-						<div class="col-6">
-						<label class="fieldlabels">Weight</label>
-			       <input type="text" name="weight" required>
-						</div>
-					</div>
-					
-					</div>
-					<div class="col-4">
-					<label class="fieldlabels">Student</label>
-                   <select>
-    <option value="Yes">Yes</option>
-    <option value="No">No</option>
-    
-    </select>
-					</div>
-				  </div>
-                  <div class="row" style="padding-left:20px;padding-right:20px;">
-				  <div class="col-4">
-					<label class="fieldlabels">First Name</label>
-                              <input type="text" name="first_name"  />
-					</div>
-					<div class="col-3">
-					<label class="fieldlabels">Date of Birth</label>
-                              <input type="date" name="dob"  />
-					</div>
-					<div class="col-5">
-					<label class="fieldlabels">Any ongoing medical treatment</label>
-              <select>
-    <option value="None">None</option>
-    <option value="Asthma">Asthma</option>
-    <option value="Cancer">Cancer</option>
-    <option value="Depression">Depression</option>
-    <option value="Diabetes">Diabetes</option>
-    <option value="Stroke">Stroke</option>
-    <option value="MS">MS</option>
-    
-    </select>
-					</div>
-				  </div>
-				  <div class="row" style="padding-left:20px;padding-right:20px;">
-				  <div class="col-4">
-					<label class="fieldlabels">Last Name</label>
-                     <input type="text" name="last_name" >
-					</div>
-					<div class="col-3">
-					<label class="fieldlabels">Gender</label>
-          <select>
-    <option value="Male">Male</option>
-    <option value="Femaale">Femaale</option>
-
-    
-    </select>
-					</div>
-					<div class="col-5">
-					<label class="fieldlabels">Medical Condition</label>
-                  <select>
-      <option value="None">None</option>
-      <option value="Asthma">Asthma</option>
-      <option value="Cancer">Cancer</option>
-      <option value="Depression">Depression</option>
-      <option value="Diabetes">Diabetes</option>
-      <option value="Stroke">Stroke</option>
-      <option value="MS">MS</option>
-    </select>
-					</div>
-				  </div>
-                  
-                </div>
-                <input
-                  type="button"
-                  name="next"
-                  class="next action-button"
-                  value="continue"
-                />
-              </fieldset>
-              <fieldset>
-                <div class="form-card" style="padding:30px;">
-                  <div class="row">
-                    <div class="col-7">
-                      <h2 class="fs-title">Coverage Details:</h2>
-                    </div>
-                    <div class="col-5">
-                      <h2 class="steps">Step 2 - 4</h2>
-                    </div>
-                  </div>
-				  <div class="row">
-				  <div class="col-sm-6">
-				  <label class="fieldlabels">Currently Coverage Type</label>
-                  <input type="text" name="fname">
-                  <label class="fieldlabels">Current Insurance Company</label>
-                  <input type="text" name="lname" >
-				  </div>
-				  <div class="col-sm-6">
-				  <label class="fieldlabels">Expiration Date</label>
-                  <input type="text" name="fname">
-                  <label class="fieldlabels">Insured  Since</label>
-                  <input type="text" name="lname" >
-				  </div>
-				  </div>
-                  
-                </div>
-                <input
-                  type="button"
-                  name="next"
-                  class="next action-button"
-                  value="Continue"
-                />
-                <input
-                  type="button"
-                  name="previous"
-                  class="previous action-button-previous"
-                  value="Previous"
-                />
-              </fieldset>
-              <fieldset>
-                <div class="form-card" style="padding:30px;">
-                  <div class="row">
-                    <div class="col-7">
-                      <h2 class="fs-title">Image Upload:</h2>
-                    </div>
-                    <div class="col-5">
-                      <h2 class="steps">Step 3 - 4</h2>
-                    </div>
-                  </div>
-                  <div class="row">
-				  <div class="col-sm-4">
-				  <label class="fieldlabels">Email</label>
-                  <input type="text" name="fname">
-                  <label class="fieldlabels">Phone Number</label>
-                  <input type="text" name="lname" >
-				  <label class="fieldlabels">State</label>
-                  <input type="text" name="lname" >
-				  </div>
-				  <div class="col-sm-4">
-				  <label class="fieldlabels">Phone Number</label>
-                  <input type="text" name="fname">
-                  <label class="fieldlabels">Address Number</label>
-                  <input type="text" name="lname" >
-				  <label class="fieldlabels">Zip Code</label>
-                  <input type="text" name="lname" >
-				  </div>
-				  <div class="col-sm-4">
-				  <label class="fieldlabels">Alternate Number</label>
-                  <input type="text" name="fname">
-                  <label class="fieldlabels">City</label>
-                  <input type="text" name="lname" >
-				  </div>
-				  </div>
-                </div>
-                <input
-                  type="button"
-                  name="next"
-                  class="next action-button"
-                  value="Submit"
-                />
-                <input
-                  type="button"
-                  name="previous"
-                  class="previous action-button-previous"
-                  value="Previous"
-                />
-              </fieldset>
-              <fieldset>
-                <div class="form-card">
-                  <div class="row">
-                    <div class="col-7">
-                      <h2 class="fs-title">Finish:</h2>
-                    </div>
-                    <div class="col-5">
-                      <h2 class="steps">Step 4 - 4</h2>
-                    </div>
-                  </div>
-                  <br /><br />
-                  <h2 class="purple-text text-center">
-                    <strong>SUCCESS !</strong>
-                  </h2>
-                  <br />
-                  <div class="row justify-content-center">
-                    <div class="col-3">
-                      <img
-                        src="https://i.imgur.com/GwStPmg.png"
-                        class="fit-image"
-                      />
-                    </div>
-                  </div>
-                  <br /><br />
-                  <div class="row justify-content-center">
-                    <div class="col-7 text-center">
-                      <h5 class="purple-text text-center">
-                        You Have Successfully Signed Up
-                      </h5>
-                    </div>
-                  </div>
-                </div>
-              </fieldset>
+              
             </form>
           </div>
         </div>
@@ -705,37 +495,21 @@ background-image:url('{{ asset('image/bg-auto.jpg')}}');background-size:cover;ba
 </div>
 <div class="xx d-none d-lg-block">
 <br>
-<h1 class="cc">HEALTH COVERAGE</h1>
-	<br>
-	<div class="container-fluid">
+<h1 class="cc">Auto COVERAGE</h1>
+  <br>
+  <div class="container-fluid">
       <div class="row justify-content-center">
         <div
-          class="col-11 col-sm-9 col-md-7 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2"
+          class="col-11 col-sm-9 col-md-7 col-lg-6 col-xl-8 text-center p-0 mt-3 mb-2"
         >
           <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
          
 
-            <form id="msform" >
-              <!-- progressbar -->
-              <center><ul id="progressbar" style="padding-top:20px;margin-left:50px;">
-                <li class="active" id="account"><strong>Applicant Details</strong></li>
-                <li id="personal"><strong>Coverage Details</strong></li>
-                <li id="payment"><strong>Contact Details</strong></li>
-               </center> 
-              </ul>
-              <div class="progress">
-                <div
-                  class="progress-bar progress-bar-striped progress-bar-animated"
-                  role="progressbar"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                ></div>
-              </div>
-              <br />
-              <!-- fieldsets -->
-              <fieldset>
-                <div class="form-card">
-                  <div class="row" style="padding-left:30px;padding-right:30px;padding-top:30px">
+             <form class="form-horizontal"  method="POST" id="myform" action="{{ route('formsubmit') }}">
+    @csrf
+        <fieldset id="account_information" class="">
+       
+        <div class="row" style="padding-left:30px;padding-right:30px;padding-top:30px">
                     <div class="col-7">
                       <h2 class="fs-title">Applicant Details:</h2>
                     </div>
@@ -743,54 +517,127 @@ background-image:url('{{ asset('image/bg-auto.jpg')}}');background-size:cover;ba
                       <h2 class="steps">Step 1 - 4</h2>
                     </div>
                   </div>
-				  <div class="row" style="padding-left:20px;padding-right:20px;padding-top:30px;">
-					<div class="col-4">
-					<label class="fieldlabels">Relationship to Applicanty</label>
-                  <select>
-    <option value="Self">Self</option>
-    <option value="Child">Child</option>
-    <option value="Spouse">Spouse</option>
-    <option value="Grandhild">Grandhild</option>
-    <option value="GrandParent">GrandParent</option>
-    <option value="Sibling">Sibling</option>
-    <option value="Parent">Parent</option>
-    <option value="Other">Other</option>
-    </select>
-					</div>
-					<div class="col-4">
-					<div class="row">
-						<div class="col-6">
-						<label class="fieldlabels">Height</label>
-					<input type="text" name="height"/ required>
-						</div>
-						<div class="col-6">
-						<label class="fieldlabels">Weight</label>
-						  <input type="text" name="weight" required>
-						</div>
-					</div>
-					
-					</div>
-					<div class="col-4">
-					<label class="fieldlabels">Student</label>
-              <select>
-    <option value="Yes">Yes</option>
-    <option value="No">No</option>
-    
-    </select>
-					</div>
-				  </div>
-                  <div class="row" style="padding-left:20px;padding-right:20px;">
-				  <div class="col-4">
-					<label class="fieldlabels">First Name</label>
-                     <input type="text" name="first_name"  />
-					</div>
-					<div class="col-3">
-					<label class="fieldlabels">Date of Birth</label>
-                       <input type="date" name="dob"  />
-					</div>
-					<div class="col-5">
-					<label class="fieldlabels">Any ongoing medical treatment</label>
-                <select>
+
+<div class="col-lg-12">
+  <div class="row g-3">
+    <div class="col">
+     <label for="relationship_to_applicant" class="col-lg-12 control-label">Year</label>
+      <select class="form-control"  name="year">
+     <option value="2000">  2000  </option>
+<option value="2001"> 2001  </option>
+<option value="2002"> 2002  </option>
+<option value="2003"> 2003  </option>
+<option value="2004"> 2004  </option>
+<option value="2005"> 2005  </option>
+<option value="2006"> 2006  </option>
+<option value="2007"> 2007  </option>
+<option value="2008"> 2008  </option>
+<option value="2009"> 2009  </option>
+<option value="2010"> 2010  </option>
+<option value="2011"> 2011  </option>
+<option value="2012"> 2012  </option>
+<option value="2013"> 2013  </option>
+<option value="2014"> 2014  </option>
+<option value="2015"> 2015  </option>
+<option value="2016"> 2016  </option>
+<option value="2017"> 2017  </option>
+<option value="2018"> 2018  </option>
+<option value="2019"> 2019  </option>
+<option value="2020"> 2020  </option>
+      </select>
+  </div>
+  <div class="col">
+     <label for="password" class="col-lg-12 control-label">Make</label>
+       <select class="form-control"  name="make">
+     <option value="2000">  2000  </option>
+<option value="2001"> 2001  </option>
+<option value="2002"> 2002  </option>
+<option value="2003"> 2003  </option>
+<option value="2004"> 2004  </option>
+<option value="2005"> 2005  </option>
+<option value="2006"> 2006  </option>
+<option value="2007"> 2007  </option>
+<option value="2008"> 2008  </option>
+<option value="2009"> 2009  </option>
+<option value="2010"> 2010  </option>
+<option value="2011"> 2011  </option>
+<option value="2012"> 2012  </option>
+<option value="2013"> 2013  </option>
+<option value="2014"> 2014  </option>
+<option value="2015"> 2015  </option>
+<option value="2016"> 2016  </option>
+<option value="2017"> 2017  </option>
+<option value="2018"> 2018  </option>
+<option value="2019"> 2019  </option>
+<option value="2020"> 2020  </option>
+      </select>
+  </div>
+
+  </div>
+   <div class="row g-3">
+    <div class="col">
+     <label for="password" class="col-lg-12 control-label">Model</label>
+       <select class="form-control"  name="model">
+     <option value="2000">  2000  </option>
+<option value="2001"> 2001  </option>
+<option value="2002"> 2002  </option>
+<option value="2003"> 2003  </option>
+<option value="2004"> 2004  </option>
+<option value="2005"> 2005  </option>
+<option value="2006"> 2006  </option>
+<option value="2007"> 2007  </option>
+<option value="2008"> 2008  </option>
+<option value="2009"> 2009  </option>
+<option value="2010"> 2010  </option>
+<option value="2011"> 2011  </option>
+<option value="2012"> 2012  </option>
+<option value="2013"> 2013  </option>
+<option value="2014"> 2014  </option>
+<option value="2015"> 2015  </option>
+<option value="2016"> 2016  </option>
+<option value="2017"> 2017  </option>
+<option value="2018"> 2018  </option>
+<option value="2019"> 2019  </option>
+<option value="2020"> 2020  </option>
+      </select>
+  </div>
+      <div class="col">
+     <label for="password" class="col-lg-12 control-label">Sub Model</label>
+       <select class="form-control"  name="sub_model">
+     <option value="2000">  2000  </option>
+<option value="2001"> 2001  </option>
+<option value="2002"> 2002  </option>
+<option value="2003"> 2003  </option>
+<option value="2004"> 2004  </option>
+<option value="2005"> 2005  </option>
+<option value="2006"> 2006  </option>
+<option value="2007"> 2007  </option>
+<option value="2008"> 2008  </option>
+<option value="2009"> 2009  </option>
+<option value="2010"> 2010  </option>
+<option value="2011"> 2011  </option>
+<option value="2012"> 2012  </option>
+<option value="2013"> 2013  </option>
+<option value="2014"> 2014  </option>
+<option value="2015"> 2015  </option>
+<option value="2016"> 2016  </option>
+<option value="2017"> 2017  </option>
+<option value="2018"> 2018  </option>
+<option value="2019"> 2019  </option>
+<option value="2020"> 2020  </option>
+      </select>
+  </div>
+
+    </div>
+
+       <div class="row g-3">
+    <div class="col">
+    <label for="conf_password" class="col-lg-12 control-label">VIN</label>
+      <input type="date" class="form-control" id="dob" name="dob" placeholder="Date of Birth">
+  </div>
+    <div class="col">
+         <label for="conf_password" class="col-lg-12 control-label">Any ongoing medical treatment</label>
+       <select class="form-control" name="any_ongoing_medical_treatment">
     <option value="None">None</option>
     <option value="Asthma">Asthma</option>
     <option value="Cancer">Cancer</option>
@@ -798,167 +645,392 @@ background-image:url('{{ asset('image/bg-auto.jpg')}}');background-size:cover;ba
     <option value="Diabetes">Diabetes</option>
     <option value="Stroke">Stroke</option>
     <option value="MS">MS</option>
-    
-    </select>
-					</div>
-				  </div>
-				  <div class="row" style="padding-left:20px;padding-right:20px;">
-				  <div class="col-4">
-					<label class="fieldlabels">Last Name</label>
-           <input type="text" name="last_name" >
-					</div>
-					<div class="col-3">
-					<label class="fieldlabels">Gender</label>
-                  <select>
-    <option value="Male">Male</option>
-    <option value="Femaale">Femaale</option>
+                    </select>
+    </div>
 
-    
-    </select>
-					</div>
-					<div class="col-5">
-					<label class="fieldlabels">Medical Condition</label>
-                  <select>
-      <option value="None">None</option>
+    </div>
+      
+
+      <div class="row g-3">
+    <div class="col">
+  <label for="conf_password" class="col-lg-12 control-label">Medical Condition</label>
+     <select class="form-control" name="medical_condition">
+   <option value="None">None</option>
       <option value="Asthma">Asthma</option>
       <option value="Cancer">Cancer</option>
       <option value="Depression">Depression</option>
       <option value="Diabetes">Diabetes</option>
       <option value="Stroke">Stroke</option>
       <option value="MS">MS</option>
-    </select>
-					</div>
-				  </div>
-                  
-                </div>
-                <input
-                  type="button"
-                  name="next"
-                  class="next action-button"
-                  value="continue"
-                />
-              </fieldset>
-              <fieldset>
-                <div class="form-card" style="padding:30px;">
-                  <div class="row">
+                    </select>
+  </div>
+<br><br>
+    <p><a class="btn btn-primary next"> Continue <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>
+
+
+
+    </div>
+
+</div>
+ </fieldset>
+
+        <fieldset id="company_information" class="">
+          <div class="row" style="padding-left:30px;padding-right:30px;padding-top:30px">
                     <div class="col-7">
-                      <h2 class="fs-title">Coverage Details:</h2>
+                      <h2 class="fs-title">Driver Details:</h2>
                     </div>
                     <div class="col-5">
                       <h2 class="steps">Step 2 - 4</h2>
                     </div>
                   </div>
-				  <div class="row">
-				  <div class="col-sm-6">
-				  <label class="fieldlabels">Currently Coverage Type</label>
-                  <input type="text" name="fname">
-                  <label class="fieldlabels">Current Insurance Company</label>
-                  <input type="text" name="lname" >
-				  </div>
-				  <div class="col-sm-6">
-				  <label class="fieldlabels">Expiration Date</label>
-                  <input type="text" name="fname">
-                  <label class="fieldlabels">Insured  Since</label>
-                  <input type="text" name="lname" >
-				  </div>
-				  </div>
-                  
-                </div>
-                <input
-                  type="button"
-                  name="next"
-                  class="next action-button"
-                  value="Continue"
-                />
-                <input
-                  type="button"
-                  name="previous"
-                  class="previous action-button-previous"
-                  value="Previous"
-                />
-              </fieldset>
-              <fieldset>
-                <div class="form-card" style="padding:30px;">
-                  <div class="row">
+
+
+
+ 
+          <div class="col-md-12">
+            <div id="field">
+              <div id="field0">
+
+
+<div class="row g-3">
+    <div class="col">
+     <label for="relationship_to_applicant" class="col-lg-12 control-label">Relationship To Applicant</label>
+         <select class="form-control" name="relationship_to_applicant">
+                      <option value="self">Self</option>
+                      <option value="child">Child</option>
+                      <option value="spouse">spouse</option>
+                      <option value="grandchild">Grand Child</option>
+                      <option value="grandparent">Grand Parent</option>
+                      <option value="sibling">Sibling</option>
+                      <option value="parent">Parent</option>
+                      <option value="other">other</option>
+                    </select>
+  </div>
+  <div class="col">
+     <label for="marital_status" class="col-lg-12 control-label">Marital Status</label>
+          <select class="form-control" name="marital_status">
+                      <option value="Single">Single</option>
+                      <option value="married">married</option>
+                      <option value="divorced">divorced</option>
+                      <option value="Separated">Separated</option>
+                      <option value="widowed">widowed</option>
+                      <option value="domestic partner">domestic partner</option>
+                      </select>
+  </div>
+
+  </div>
+
+  <div class="row g-3">
+    <div class="col">
+         <label for="marital_status" class="col-lg-12 control-label">License Status</label>
+          <select class="form-control" name="marital_status">
+                      <option value="Active">Active</option>
+                      <option value="International">International</option>
+                      <option value="Learner">Learner</option>
+                      <option value="probation">probation</option>
+                      <option value="restricted">restricted</option>
+                      <option value="suspended">suspended</option>
+                      <option value="temporary">temporary</option>
+                      </select>
+  </div>
+  <div class="col">
+         <label for="marital_status" class="col-lg-12 control-label">License State</label>
+          <select class="form-control" name="marital_status">
+                      <option value="CA">CA</option>
+                      <option value="AK">AK</option>
+                      <option value="AL">AL</option>
+                      <option value="etc">etc</option>
+                      </select>
+  </div>
+
+  </div>
+  <div class="row g-3">
+    <div class="col">
+    <label for="first_name" class="col-lg-12 control-label">First Name</label>
+     <input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name">
+  </div>
+    <div class="col">
+      <label for="conf_password" class="col-lg-12 control-label">Last Name</label>
+      <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name">
+
+       
+
+         
+    </div>
+
+    </div>
+     <div class="row g-3">
+    <div class="col">
+    <label for="conf_password" class="col-lg-12 control-label">Date of Birth</label>
+      <input type="date" class="form-control" id="dob" name="dob" placeholder="Date of Birth">
+  </div>
+    <div class="col">
+          <label for="conf_password" class="col-lg-12 control-label">Gender</label>
+       <select class="form-control" name="gender">
+    <option value="Male">Male</option>
+    <option value="Femaale">Femaale</option>
+                    </select>
+    </div>
+
+    </div>
+              </div>
+          
+            </div>
+        
+            <br><br>
+          </div>
+           <div class="row g-3">
+    <div class="col">
+           <p><a class="btn btn-primary" id="previous"> <i class="fa fa-arrow-left" aria-hidden="true"></i> Previous</a></p>
+  </div>
+  <div class="col">
+          <p><a class="btn btn-primary next"> Continue <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>
+  </div>
+
+  </div>
+
+      
+ 
+        </fieldset>
+
+        {{-- +++++++++++++++++++++++++++++++++++++++++start++++++++++++++++++++++++++ --}}
+
+  <fieldset id="company_information" class="">
+          <div class="row" style="padding-left:30px;padding-right:30px;padding-top:30px">
                     <div class="col-7">
-                      <h2 class="fs-title">Image Upload:</h2>
+                      <h2 class="fs-title">Coverage info:</h2>
                     </div>
                     <div class="col-5">
                       <h2 class="steps">Step 3 - 4</h2>
                     </div>
                   </div>
-                  <div class="row">
-				  <div class="col-sm-4">
-				  <label class="fieldlabels">Email</label>
-                  <input type="text" name="fname">
-                  <label class="fieldlabels">Phone Number</label>
-                  <input type="text" name="lname" >
-				  <label class="fieldlabels">State</label>
-                  <input type="text" name="lname" >
-				  </div>
-				  <div class="col-sm-4">
-				  <label class="fieldlabels">Phone Number</label>
-                  <input type="text" name="fname">
-                  <label class="fieldlabels">Address Number</label>
-                  <input type="text" name="lname" >
-				  <label class="fieldlabels">Zip Code</label>
-                  <input type="text" name="lname" >
-				  </div>
-				  <div class="col-sm-4">
-				  <label class="fieldlabels">Alternate Number</label>
-                  <input type="text" name="fname">
-                  <label class="fieldlabels">City</label>
-                  <input type="text" name="lname" >
-				  </div>
-				  </div>
-                </div>
-                <input
-                  type="button"
-                  name="next"
-                  class="next action-button"
-                  value="Submit"
-                />
-                <input
-                  type="button"
-                  name="previous"
-                  class="previous action-button-previous"
-                  value="Previous"
-                />
-              </fieldset>
-              <fieldset>
-                <div class="form-card">
-                  <div class="row">
+
+
+
+ 
+          <div class="col-md-12">
+            <div id="field">
+              <div id="field0">
+
+
+<div class="row g-3">
+    <div class="col">
+     <label for="relationship_to_applicant" class="col-lg-12 control-label">Coverage type</label>
+         <select class="form-control" name="relationship_to_applicant">
+                      <option value="State Minimum">State Minimum</option>
+                      <option value="Standard">Standard</option>
+                      <option value="Premium (Basic)">Premium (Basic)</option>
+                      <option value="Preferred (Superior)">Preferred (Superior)</option>
+                     </select>
+  </div>
+  <div class="col">
+     <label for="marital_status" class="col-lg-12 control-label">Uninsured Motorist cover</label>
+          <select class="form-control" name="marital_status">
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
+  </div>
+
+  </div>
+
+  <div class="row g-3">
+    <div class="col">
+         <label for="marital_status" class="col-lg-12 control-label">Current coverage type</label>
+          <select class="form-control" name="marital_status">
+                      <option value="Not currently insured">Not currently insured</option>
+                      <option value="State Minimum">State Minimum</option>
+                      <option value="Standard">Standard</option>
+                      <option value="Premium (Basic)">Premium (Basic)</option>
+                      <option value="Preferred ">Preferred </option>
+                      </select>
+  </div>
+  <div class="col">
+         <label for="marital_status" class="col-lg-12 control-label">Current Insurance Company</label>
+          <select class="form-control" name="marital_status">
+                      <option value="21st Century Insurance">21st Century Insurance</option>
+                      <option value="AAA Insurance Co.">AAA Insurance Co.</option>
+                      <option value="AABCO">AABCO</option>
+                      <option value="AARP">AARP</option>
+                      </select>
+  </div>
+
+  </div>
+  <div class="row g-3">
+    <div class="col">
+   <label for="password" class="col-lg-12 control-label">Current Policy Expiry Date</label>
+       <select class="form-control"  name="sub_model">
+     <option value="2000">  2000  </option>
+<option value="2001"> 2001  </option>
+<option value="2002"> 2002  </option>
+<option value="2003"> 2003  </option>
+<option value="2004"> 2004  </option>
+<option value="2005"> 2005  </option>
+<option value="2006"> 2006  </option>
+<option value="2007"> 2007  </option>
+<option value="2008"> 2008  </option>
+<option value="2009"> 2009  </option>
+<option value="2010"> 2010  </option>
+<option value="2011"> 2011  </option>
+<option value="2012"> 2012  </option>
+<option value="2013"> 2013  </option>
+<option value="2014"> 2014  </option>
+<option value="2015"> 2015  </option>
+<option value="2016"> 2016  </option>
+<option value="2017"> 2017  </option>
+<option value="2018"> 2018  </option>
+<option value="2019"> 2019  </option>
+<option value="2020"> 2020  </option>
+      </select>
+  </div>
+    <div class="col">
+      <label for="password" class="col-lg-12 control-label">Insured Since (date)</label>
+       <select class="form-control"  name="sub_model">
+     <option value="2000">  2000  </option>
+<option value="2001"> 2001  </option>
+<option value="2002"> 2002  </option>
+<option value="2003"> 2003  </option>
+<option value="2004"> 2004  </option>
+<option value="2005"> 2005  </option>
+<option value="2006"> 2006  </option>
+<option value="2007"> 2007  </option>
+<option value="2008"> 2008  </option>
+<option value="2009"> 2009  </option>
+<option value="2010"> 2010  </option>
+<option value="2011"> 2011  </option>
+<option value="2012"> 2012  </option>
+<option value="2013"> 2013  </option>
+<option value="2014"> 2014  </option>
+<option value="2015"> 2015  </option>
+<option value="2016"> 2016  </option>
+<option value="2017"> 2017  </option>
+<option value="2018"> 2018  </option>
+<option value="2019"> 2019  </option>
+<option value="2020"> 2020  </option>
+      </select>
+
+       
+
+         
+    </div>
+
+    </div>
+     <div class="row g-3">
+    <div class="col">
+    <label for="conf_password" class="col-lg-12 control-label">Date of Birth</label>
+      <input type="date" class="form-control" id="dob" name="dob" placeholder="Date of Birth">
+  </div>
+    <div class="col">
+          <label for="conf_password" class="col-lg-12 control-label">Gender</label>
+       <select class="form-control" name="gender">
+    <option value="Male">Male</option>
+    <option value="Femaale">Femaale</option>
+                    </select>
+    </div>
+
+    </div>
+              </div>
+          
+            </div>
+        
+            <br><br>
+          </div>
+           <div class="row g-3">
+    <div class="col">
+           <p><a class="btn btn-primary" id="previous"> <i class="fa fa-arrow-left" aria-hidden="true"></i> Previous</a></p>
+  </div>
+  <div class="col">
+          <p><a class="btn btn-primary next"> Continue <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>
+  </div>
+
+  </div>
+
+      
+ 
+        </fieldset>
+
+
+{{--         +++++++++++++++++++++++++++++++++++++++++End ++++++++++++++++++++++++++++ --}}
+
+        <fieldset id="personal_information" class="">
+           <div class="row" style="padding-left:30px;padding-right:30px;padding-top:30px">
                     <div class="col-7">
-                      <h2 class="fs-title">Finish:</h2>
+                      <h2 class="fs-title">Coverage Details:</h2>
                     </div>
                     <div class="col-5">
                       <h2 class="steps">Step 4 - 4</h2>
                     </div>
                   </div>
-                  <br /><br />
-                  <h2 class="purple-text text-center">
-                    <strong>SUCCESS !</strong>
-                  </h2>
-                  <br />
-                  <div class="row justify-content-center">
-                    <div class="col-3">
-                      <img
-                        src="https://i.imgur.com/GwStPmg.png"
-                        class="fit-image"
-                      />
-                    </div>
-                  </div>
-                  <br /><br />
-                  <div class="row justify-content-center">
-                    <div class="col-7 text-center">
-                      <h5 class="purple-text text-center">
-                        You Have Successfully Signed Up
-                      </h5>
-                    </div>
-                  </div>
-                </div>
-              </fieldset>
-            </form>
+
+          <div class="col-md-12">
+            <div id="fielda">
+              <div id="fielda0">
+                <!-- Text input-->
+                  <div class="row g-3">
+    <div class="col">
+     <label for="relationship_to_applicant" class="col-lg-12 control-label">Email</label>
+         <input type="email" name="email" id="email" class="form-control" placeholder="Email" required>
+  </div>
+  <div class="col">
+
+      <label for="relationship_to_applicant" class="col-lg-12 control-label">Phone</label>
+           <input type="number" name="phone" id="phone" class="form-control" placeholder="Phone" required>
+  </div>
+
+  </div>
+
+               
+    <div class="row g-3">
+    <div class="col">
+     <label for="relationship_to_applicant" class="col-lg-12 control-label">Address</label>
+           <input type="text" name="address" id="address" class="form-control" placeholder="Address" required>
+  </div>
+  <div class="col">
+
+      <label for="relationship_to_applicant" class="col-lg-12 control-label">city</label>
+       <input type="text" name="city" id="city" class="form-control" placeholder="city" required>
+  </div>
+
+  </div>
+              
+               <div class="row g-3">
+    <div class="col">
+     <label for="relationship_to_applicant" class="col-lg-12 control-label">state</label>
+           <input type="text" name="state" id="state" class="form-control" placeholder="State" required>
+  </div>
+  <div class="col">
+
+      <label for="relationship_to_applicant" class="col-lg-12 control-label">Zip</label>
+    <input type="text" name="zip" id="zip" class="form-control" placeholder="Zip" required>
+  </div>
+
+  </div> 
+               
+              
+
+               
+
+           
+                <hr>
+              </div>
+        
+            </div>
+          <br><br>
+          </div>
+           <div class="row g-3">
+    <div class="col">
+   <p><a class="btn btn-primary" id="previous"> <i class="fa fa-arrow-left" aria-hidden="true"></i> Previous</a></p>
+  </div>
+  <div class="col">
+<p><input class="btn btn-success" type="submit" value="submit"></p>
+  </div>
+
+  </div> 
+
+          
+          
+        </fieldset>
+<div class="col-lg-8">
+      </form>
           </div>
         </div>
       </div>
@@ -970,7 +1042,7 @@ background-image:url('{{ asset('image/bg-auto.jpg')}}');background-size:cover;ba
     color:white;
     font-weight: 700;
     text-align:center;">With Casecade Coverage your future is secure</h1>
-	<p style="color:white;
+  <p style="color:white;
     font-size: 20px;
     font-weight: 400;text-align:center">We have a strong track record of meeting our financial obligation and delivering <br>on our promises to policyholder</p>
 <br>
@@ -980,92 +1052,112 @@ background-image:url('{{ asset('image/bg-auto.jpg')}}');background-size:cover;ba
     padding: 10px;
     font-weight: 600;
     padding-right: 30px;"><i class="fa fa-phone"></i>&nbsp;&nbsp;CONTACT US</button></center>
-	<br><br>
+  <br><br>
 </div>
 
-    <script>
-      $(document).ready(function () {
-        var current_fs, next_fs, previous_fs; //fieldsets
-        var opacity;
-        var current = 1;
-        var steps = $("fieldset").length;
+<script type="text/javascript">
+  $(document).ready(function () {
+  $.validator.addMethod(
+    "usernameRegex",
+    function (value, element) {
+      return this.optional(element) || /^[a-zA-Z0-9]*$/i.test(value);
+    },
+    "Username must contain only letters, numbers"
+  );
 
-        setProgressBar(current);
-
-        $(".next").click(function () {
-          current_fs = $(this).parent();
-          next_fs = $(this).parent().next();
-
-          //Add Class Active
-          $("#progressbar li")
-            .eq($("fieldset").index(next_fs))
-            .addClass("active");
-
-          //show the next fieldset
-          next_fs.show();
-          //hide the current fieldset with style
-          current_fs.animate(
-            { opacity: 0 },
-            {
-              step: function (now) {
-                // for making fielset appear animation
-                opacity = 1 - now;
-
-                current_fs.css({
-                  display: "none",
-                  position: "relative",
-                });
-                next_fs.css({ opacity: opacity });
-              },
-              duration: 500,
-            }
-          );
-          setProgressBar(++current);
-        });
-
-        $(".previous").click(function () {
-          current_fs = $(this).parent();
-          previous_fs = $(this).parent().prev();
-
-          //Remove class active
-          $("#progressbar li")
-            .eq($("fieldset").index(current_fs))
-            .removeClass("active");
-
-          //show the previous fieldset
-          previous_fs.show();
-
-          //hide the current fieldset with style
-          current_fs.animate(
-            { opacity: 0 },
-            {
-              step: function (now) {
-                // for making fielset appear animation
-                opacity = 1 - now;
-
-                current_fs.css({
-                  display: "none",
-                  position: "relative",
-                });
-                previous_fs.css({ opacity: opacity });
-              },
-              duration: 500,
-            }
-          );
-          setProgressBar(--current);
-        });
-
-        function setProgressBar(curStep) {
-          var percent = parseFloat(100 / steps) * curStep;
-          percent = percent.toFixed();
-          $(".progress-bar").css("width", percent + "%");
+  $(".next").click(function () {
+    var form = $("#myform");
+    form.validate({
+      errorElement: "span",
+      errorClass: "help-block",
+      highlight: function (element, errorClass, validClass) {
+        $(element).closest(".form-group").addClass("has-error");
+      },
+      unhighlight: function (element, errorClass, validClass) {
+        $(element).closest(".form-group").removeClass("has-error");
+      },
+      rules: {
+        username: {
+          required: true,
+          usernameRegex: true,
+          minlength: 6
+        },
+        password: {
+          required: true
+        },
+        conf_password: {
+          required: true,
+          equalTo: "#password"
+        },
+        company: {
+          required: true
+        },
+        url: {
+          required: true
+        },
+        name: {
+          required: true,
+          minlength: 3
+        },
+        email: {
+          required: true,
+          minlength: 3
         }
+      },
+      messages: {
+        username: {
+          required: "Username required"
+        },
+       /* password: {
+          required: "Password required"
+        },
+        conf_password: {
+          required: "Password required",
+          equalTo: "Password don't match"
+        },*/
+        name: {
+          required: "Name required"
+        },
+        email: {
+          required: "Email required"
+        }
+      }
+    });
+    if (form.valid() === true) {
+      if ($("#account_information").is(":visible")) {
+        current_fs = $("#account_information");
+        next_fs = $("#company_information");
+      } else if ($("#company_information").is(":visible")) {
+        current_fs = $("#company_information");
+        next_fs = $("#personal_information");
+      }
 
-        $(".submit").click(function () {
-          return false;
-        });
-      });
-    </script>
+      next_fs.show();
+      current_fs.hide();
+    }
+  });
+
+  $("#previous").click(function () {
+    if ($("#company_information").is(":visible")) {
+      current_fs = $("#company_information");
+      next_fs = $("#account_information");
+    } else if ($("#personal_information").is(":visible")) {
+      current_fs = $("#personal_information");
+      next_fs = $("#company_information");
+    }
+    next_fs.show();
+    current_fs.hide();
+  });
+
+
+
+ 
+
+
+});
+
+</script>
+
 </body>
 </html>
 

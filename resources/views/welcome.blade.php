@@ -297,11 +297,12 @@
     border: 5px solid #cecece;
 ">
             <div class="col-sm-6">
-                            <center><img src="{{ asset('image/aaa.png')}}" style="width:50%;"></center>
+                            <center> <a class="nav-link" href="{{ route('auto-coverage') }}"> <img src="{{ asset('image/aaa.png')}}" style="width:50%;"></a></center>
 
             </div>
             <div class="col-sm-6">
-                            <center>            <img src="{{ asset('image/ss.png')}}" style="width:50%;"></center>
+              <center> <a class="nav-link" href="{{ route('helth-coverage') }}"> <img src="{{ asset('image/ss.png')}}" style="width:50%;"></a></center>
+                            
 
             </div>
         </div>

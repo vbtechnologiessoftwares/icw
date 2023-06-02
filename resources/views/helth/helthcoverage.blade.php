@@ -365,7 +365,7 @@ background-image:url('{{ asset('image/health-bg.jpg')}}');background-size:cover;
 <div style="background-image:url('{{ asset('image/Health-coverage-jpg.jpg')}}');background-size:cover;background-repeat:no-repeat;" class="d-none d-lg-block">
 <nav class="navbar navbar-expand-sm  navbar-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src="{{ asset('image/imageedit_2_6154389925.png')}}"></a>
+    <a class="navbar-brand" href="#"><img src="{{ asset('image/logo-dark-bg.png')}}"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -757,7 +757,7 @@ background-image:url('{{ asset('image/health-bg.jpg')}}');background-size:cover;
           </div>
            <div class="row g-3">
     <div class="col">
-   <p><a class="btn btn-primary" id="previous">Previous</a></p>
+   <p><a class="btn btn-primary" id="previous"> <i class="fa fa-arrow-left" aria-hidden="true"></i> Previous</a></p>
   </div>
   <div class="col">
 <p><input class="btn btn-success" type="submit" value="submit"></p>

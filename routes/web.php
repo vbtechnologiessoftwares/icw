@@ -30,6 +30,11 @@ Route::get('auto_index', [AutoController::class, 'index'])->name('auto.index')->
 Route::get('auto_show/{id}', [AutoController::class, 'show'])->name('auto.show')->middleware('auth');
 Route::get('auto-coverage', [AutoController::class, 'autocoverage'])->name('auto-coverage');
 
+Route::get('testing', [AutoController::class, 'testing'])->name('testing');
+
+Route::post('testingsub', [AutoController::class, 'testingsub'])->name('testingsub');
+Route::post('testingsubsub', [AutoController::class, 'testingsubsub'])->name('testingsubsub');
+
 
 Route::get('helth_index', [HelthController::class, 'index'])->name('helth.index')->middleware('auth');
 Route::get('helth_show/{id}', [HelthController::class, 'show'])->name('helth.show')->middleware('auth');
