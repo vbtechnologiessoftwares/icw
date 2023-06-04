@@ -477,7 +477,7 @@ background-image:url('{{ asset('image/health-bg.jpg')}}');background-size:cover;
   </div>
 </div>
 </div>
-<div class=" d-lg-none" style="background-color: #c1dcff;">
+{{-- <div class=" d-lg-none" style="background-color: #c1dcff;">
 <br>
 <h1 class="cc">HEALTH COVERAGE</h1>
   <br>
@@ -496,8 +496,8 @@ background-image:url('{{ asset('image/health-bg.jpg')}}');background-size:cover;
         </div>
       </div>
     </div>
-</div>
-<div class="xx d-none d-lg-block">
+</div> --}}
+<div class="xx d-lg-block">
 <br>
 <h1 class="cc">HEALTH COVERAGE</h1>
   <br>
@@ -538,11 +538,35 @@ background-image:url('{{ asset('image/health-bg.jpg')}}');background-size:cover;
       </select>
   </div>
   <div class="col">
-     <label for="password" class="col-lg-12 control-label">Height</label>
-      <input type="number" class="form-control" id="height" name="height" placeholder="Height">
+     <label for="conf_password" class="col-lg-12 control-label">Medical Condition</label>
+     <select class="form-control" name="medical_condition">
+   <option value="None">None</option>
+      <option value="Asthma">Asthma</option>
+      <option value="Cancer">Cancer</option>
+      <option value="Depression">Depression</option>
+      <option value="Diabetes">Diabetes</option>
+      <option value="Stroke">Stroke</option>
+      <option value="MS">MS</option>
+                    </select>
   </div>
 
   </div>
+  <div class="row g-3">
+    <div class="col">
+     <label for="password" class="col-lg-12 control-label">Height</label>
+      <input type="number" class="form-control" id="height" name="height" placeholder="Height">
+  </div>
+    <div class="col">
+      <label for="conf_password" class="col-lg-12 control-label">Weight</label>
+          <input type="number" class="form-control" id="weight" name="weight" placeholder="Weight">
+
+       
+
+         
+    </div>
+
+    </div>
+
    <div class="row g-3">
     <div class="col">
     <label for="first_name" class="col-lg-12 control-label">First Name</label>
@@ -596,18 +620,10 @@ background-image:url('{{ asset('image/health-bg.jpg')}}');background-size:cover;
 
     </div>
 
+
       <div class="row g-3">
     <div class="col">
-  <label for="conf_password" class="col-lg-12 control-label">Medical Condition</label>
-     <select class="form-control" name="medical_condition">
-   <option value="None">None</option>
-      <option value="Asthma">Asthma</option>
-      <option value="Cancer">Cancer</option>
-      <option value="Depression">Depression</option>
-      <option value="Diabetes">Diabetes</option>
-      <option value="Stroke">Stroke</option>
-      <option value="MS">MS</option>
-                    </select>
+ 
   </div>
     <p><a class="btn btn-primary next"> Continue <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>
 
@@ -646,7 +662,7 @@ background-image:url('{{ asset('image/health-bg.jpg')}}');background-size:cover;
   </div>
   <div class="col">
      <label for="password" class="col-lg-12 control-label">Current Insurance Company</label>
-           <input type="text" class="form-control" id="current_coverage_type" name="current_coverage_type" placeholder="Current Insurance Company">
+           <input type="text" class="form-control" id="current_insurance_company" name="current_insurance_company" placeholder="Current Insurance Company">
   </div>
 
   </div>
@@ -663,11 +679,6 @@ background-image:url('{{ asset('image/health-bg.jpg')}}');background-size:cover;
   </div>
 
   </div>
-               
-                
-
-             
-
               </div>
               <!--end field0-->
             </div>

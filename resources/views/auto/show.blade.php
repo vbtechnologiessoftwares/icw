@@ -46,7 +46,9 @@
   </div>
 </nav>
 
+
 <div class="container-fluid">
+
   <div class="row content">
     <div class="col-sm-2 sidenav hidden-xs">
       <h2>Logo</h2>
@@ -63,7 +65,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2> Show Product</h2>
+                <h2> Show Auto Profile</h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="{{ route('auto.index') }}"> Back</a>
@@ -71,17 +73,143 @@
         </div>
     </div>
    
+
+
+
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Name:</strong>
+                <strong>Year:</strong>
                 {{ $autoshow->year }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Details:</strong>
+                <strong>Make:</strong>
                 {{ $autoshow->make }}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Model:</strong>
+                {{ $autoshow->model }}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Sub Model:</strong>
+                {{ $autoshow->sub_model }}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>VIN:</strong>
+                {{ $autoshow->vin }}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Relationship To Applicant:</strong>
+                {{ $autoshow->relationship_to_applicant }}
+            </div>
+        </div>
+         <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Marital Status:</strong>
+                {{ $autoshow->marital_status }}
+            </div>
+        </div> <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>License Status:</strong>
+                {{ $autoshow->license_status }}
+            </div>
+        </div> <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>License State:</strong>
+                {{ $autoshow->license_state }}
+            </div>
+        </div> <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>First Name Relationship :</strong>
+                {{ $autoshow->first_name_relationship }}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Last Name Relationship :</strong>
+                {{ $autoshow->last_name_relationship }}
+            </div>
+        </div> <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Coverage type:</strong>
+                {{ $autoshow->coverage_type }}
+            </div>
+        </div> <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Uninsured Motorist cover:</strong>
+                {{ $autoshow->uninsured_motorist_cover }}
+            </div>
+        </div> <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Current coverage type:</strong>
+                {{ $autoshow->current_coverage_type }}
+            </div>
+        </div> <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Current Insurance Company:</strong>
+                {{ $autoshow->current_insurance_company }}
+            </div>
+        </div> <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Current Policy Expiry Date:</strong>
+                {{ $autoshow->current_policy_expiry_date }}
+            </div>
+        </div> <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Insured Since (date):</strong>
+                {{ $autoshow->insured_Since }}
+            </div>
+        </div> <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>First Name:</strong>
+                {{ $autoshow->first_name }}
+            </div>
+        </div> <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Last Name:</strong>
+                {{ $autoshow->last_name }}
+            </div>
+        </div> <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Email:</strong>
+                {{ $autoshow->email }}
+            </div>
+        </div>
+         <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Phone:</strong>
+                {{ $autoshow->phone }}
+            </div>
+        </div> <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Address:</strong>
+                {{ $autoshow->address }}
+            </div>
+        </div> <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>city:</strong>
+                {{ $autoshow->city }}
+            </div>
+        </div> <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>state:</strong>
+                {{ $autoshow->state }}
+            </div>
+        </div>
+         <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Zip:</strong>
+                {{ $autoshow->zip }}
             </div>
         </div>
     </div>

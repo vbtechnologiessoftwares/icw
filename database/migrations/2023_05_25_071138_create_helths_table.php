@@ -30,9 +30,11 @@ return new class extends Migration
             $table->string('expiration_date')->nullable();
             $table->string('insured_since')->nullable();
             $table->string('email')->nullable();
+            $table->string('zip')->nullable();
+            $table->string('state')->nullable();
+            $table->string('city')->nullable();
+            $table->string('address')->nullable();
             $table->string('phone')->nullable();
-            $table->string('insured_since')->nullable();
-            $table->string('insured_since')->nullable();
             $table->string('other')->nullable();
             $table->timestamps();
         });

@@ -28,6 +28,9 @@ Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('auto_index', [AutoController::class, 'index'])->name('auto.index')->middleware('auth');
 Route::get('auto_show/{id}', [AutoController::class, 'show'])->name('auto.show')->middleware('auth');
+Route::post('autosubmit', [AutoController::class, 'autosubmit'])->name('auto.autosubmit');
+
+
 Route::get('auto-coverage', [AutoController::class, 'autocoverage'])->name('auto-coverage');
 
 Route::get('testing', [AutoController::class, 'testing'])->name('testing');

@@ -65,6 +65,11 @@
             <th>No</th>
             <th>First Name</th>
             <th>Last Name</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip</th>
             <th width="280px">Action</th>
         </tr>
         @foreach ($products as $product)
@@ -72,6 +77,11 @@
             <td>{{ ++$i }}</td>
             <td>{{ $product->first_name }}</td>
             <td>{{ $product->last_name }}</td>
+            <td>{{ $product->phone }}</td>
+            <td>{{ $product->address }}</td>
+            <td>{{ $product->city }}</td>
+            <td>{{ $product->state }}</td>
+            <td>{{ $product->zip }}</td>
             <td>
                <a class="btn btn-info" href="{{ route('auto.show',$product->id) }}">Show</a>
         </td>

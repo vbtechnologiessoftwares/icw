@@ -12,7 +12,9 @@ class AutoController extends Controller
 {
     public function autocoverage()
     {
-    return view('auto.autocoverage');
+         $automake = Automake::get();
+
+    return view('auto.autocoverage',compact('automake'));
     }
 
 
@@ -45,6 +47,16 @@ class AutoController extends Controller
          $automake = Automake::get();
         return view('testing',compact('automake'));
     } 
+
+    public function autosubmit(Request $request)
+    {
+        $dnclist = Auto::create($request->all());
+        
+       return redirect()->back();
+
+       
+    } 
+
 
          public function testingsubsub(Request $request)
     {
